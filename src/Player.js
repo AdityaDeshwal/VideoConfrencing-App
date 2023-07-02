@@ -10,6 +10,7 @@ function Player() {
           id="user-1"
           autoPlay
           playsInline
+          muted="muted"
         ></video>
         <video
           className="video-player"
