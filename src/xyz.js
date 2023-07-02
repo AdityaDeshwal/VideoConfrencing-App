@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import AgoraRTM from 'agora-rtm-sdk';
 
 let localstream;
@@ -20,6 +20,13 @@ if(!roomId){
   window.location='lobby.html'
 }
 
+let constraints={
+  video:{
+    width:{min:640,ideal:1920,max:1920},
+    height:{min:480,ideal:1080,max:1080},
+  },
+  audio:true
+}
 
 const servers={
   iceservers:[
@@ -29,7 +36,7 @@ const servers={
   ]
 }
 
-localstream=await navigator.mediaDevices.getUserMedia({video:true, audio:true});
+localstream=await navigator.mediaDevices.getUserMedia(constraints);
 // let Init= async()=>{
 //   // useEffect(()=>{
 //   //   document.getElementById('user-1').srcObject=localstream 
@@ -38,6 +45,7 @@ localstream=await navigator.mediaDevices.getUserMedia({video:true, audio:true});
 //     document.getElementById('user-2').srcObject=remotestream
 //   },[]);
 // }
+
 
 let creatingchannel=async()=>{
   client=await AgoraRTM.createInstance(APP_ID);
@@ -56,6 +64,7 @@ let creatingchannel=async()=>{
 
 let handleUserLeft=(MemberId)=>{
   document.getElementById('user-2').style.display='none'
+  document.getElementById('user-1').classList.remove('smallFrame')
 }
 
 let handleMessageFromPeer=async(message,MemberId)=>{
@@ -84,6 +93,8 @@ let createPeerConnection=async(MemberId)=>{
   remotestream=new MediaStream()
   document.getElementById('user-2').srcObject=remotestream
   document.getElementById('user-2').style.display='block'
+
+  document.getElementById('user-1').classList.add('smallFrame')
 
   localstream.getTracks().forEach((track)=>{
     peerConnection.addTrack(track,localstream)
@@ -167,7 +178,7 @@ window.addEventListener('beforeunload',leavechannel)
 function Runplayer(){
   // Init()
   return(
-    <h1>working</h1>
+    <h1></h1>
   );
 }
 export default Runplayer;
