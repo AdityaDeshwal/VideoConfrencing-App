@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="lobby.css">
     <title>Document</title>
 </head>
 <body>
-    <form id="join-form">
-        <input type="text" name="invite_link" required/>
-        <input type="submit" value="Join Room"/>
-    </form>
+    <main id="lobby-container">
+        <div id="form-container">
+            <div id="form_conatiner_header">
+                <p>👋 Create or Join a Room</p>
+            </div>
+
+            <div id="form_content_wrapper">
+                <form id="join-form">
+                    <input type="text" name="invite_link" required/>
+                    <input type="submit" value="Join Room"/>
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
 <script>
     let form=document.getElementById('join-form')
