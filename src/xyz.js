@@ -22,8 +22,8 @@ if(!roomId){
 
 let constraints={
   video:{
-    width:{min:640,ideal:1920,max:1920},
-    height:{min:480,ideal:1080,max:1080},
+    width:{min:640,ideal:1920,max:7680},
+    height:{min:480,ideal:1080,max:4320},
   },
   audio:true
 }
@@ -173,6 +173,39 @@ let toggleMic=async()=>{
 }
 
 window.addEventListener('beforeunload',leavechannel)
+
+
+// // Retrieve the original aspect ratio of the video stream
+// const originalAspectRatio = remotestream.videoWidth / remotestream.videoHeight;
+
+// // Determine the container dimensions
+// const containerWidth = remotestream.offsetWidth;
+// const containerHeight = remotestream.offsetHeight;
+
+// // Calculate the target dimensions while maintaining aspect ratio
+// let targetWidth, targetHeight;
+
+// if (containerWidth / originalAspectRatio < containerHeight) {
+//   targetWidth = containerWidth;
+//   targetHeight = targetWidth / originalAspectRatio;
+// } else {
+//   targetHeight = containerHeight;
+//   targetWidth = targetHeight * originalAspectRatio;
+// }
+
+// // Apply the calculated dimensions to the video element
+// remotestream.style.width = `${targetWidth}px`;
+// remotestream.style.height = `${targetHeight}px`;
+
+// // Adjust for letterboxing or pillarboxing if necessary
+// const horizontalPadding = (containerWidth - targetWidth) / 2;
+// const verticalPadding = (containerHeight - targetHeight) / 2;
+
+// remotestream.style.paddingLeft = `${horizontalPadding}px`;
+// remotestream.style.paddingRight = `${horizontalPadding}px`;
+// remotestream.style.paddingTop = `${verticalPadding}px`;
+// remotestream.style.paddingBottom = `${verticalPadding}px`;
+
 
 
 function Runplayer(){
