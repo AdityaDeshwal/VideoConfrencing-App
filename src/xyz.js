@@ -31,7 +31,7 @@ let constraints={
 const servers={
   iceservers:[
     {
-      urls:['stun:stun1.l.google.com:19302','stun:stun2.l.google.com:19302']
+      urls:['stun:stun4.l.google.com:19302','stun:stun.voiparound.com']
     }
   ]
 }
