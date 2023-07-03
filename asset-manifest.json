@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/VideoConfrencing-App/static/css/main.9c79d5e1.css",
+    "main.css": "/VideoConfrencing-App/static/css/main.e02fd11d.css",
     "main.js": "/VideoConfrencing-App/static/js/main.4e0ddaa1.js",
     "static/js/787.c4e7f8f9.chunk.js": "/VideoConfrencing-App/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/VideoConfrencing-App/index.html",
-    "main.9c79d5e1.css.map": "/VideoConfrencing-App/static/css/main.9c79d5e1.css.map",
+    "main.e02fd11d.css.map": "/VideoConfrencing-App/static/css/main.e02fd11d.css.map",
     "main.4e0ddaa1.js.map": "/VideoConfrencing-App/static/js/main.4e0ddaa1.js.map",
     "787.c4e7f8f9.chunk.js.map": "/VideoConfrencing-App/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c79d5e1.css",
+    "static/css/main.e02fd11d.css",
     "static/js/main.4e0ddaa1.js"
   ]
 }
