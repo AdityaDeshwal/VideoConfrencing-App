@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Screenshot (152).png" />
     <link rel="stylesheet" type="text/css" href="lobby.css">
-    <title>Document</title>
+    <title>Pal Connect</title>
 </head>
 <body>
     <main id="lobby-container">
+        <div id="welcome-container">
+            <div id="help-btn">?</div>
+            <div id="welcome-message">
+                <p>Welcome to the Pal Connect ✌️<br> You can join the room id provided by your Pal,
+                    or simply can create on of your own.<br>A room id is any text without spaces.
+                </p>
+            </div>
+        </div>
         <div id="form-container">
             <div id="form_conatiner_header">
                 <p>👋 Create or Join a Room</p>
@@ -31,4 +40,5 @@ form.addEventListener('submit',(e)=>{
     window.location=`index.html?room=${inviteCode}`
 })
 </script>
+<script src="lobby.js"></script>
 </html>

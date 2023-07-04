@@ -3,6 +3,33 @@ body{
     color: #fff;
 }
 
+#help-btn{
+    background-color:#1a1a1a;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right:10%;
+    top:15%;
+    color: #fff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome-message{
+    background-color:#262625;
+    text-align: center;
+    max-width: 560px;
+    border-radius: 10px;
+    position: fixed;
+    left:50%;
+    top:15%;
+    transform: translate(-50%,-50%);
+    padding: 2px 20px;
+    visibility: hidden;
+}
+
 #form-container{
     width: 90%;
     max-width: 600px;
