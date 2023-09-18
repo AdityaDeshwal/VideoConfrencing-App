@@ -6,7 +6,7 @@ let localstream;
 let remotestream;
 let peerConnection;
 
-let APP_ID="7cbb24f5619b4d5f8f1ec69f6b35ee9c";
+let APP_ID="438c69d5dfc24978a8827546543a8c72";
 let token=null;
 let uid=String(Math.floor(Math.random()*10000));
 let client;
